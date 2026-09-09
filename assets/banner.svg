@@ -1,0 +1,233 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080c14" />
+      <stop offset="50%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#070b12" />
+    </linearGradient>
+
+    <!-- Vibrant Cyber Accent Gradient -->
+    <linearGradient id="accent-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00DFD8" />
+      <stop offset="50%" stop-color="#38BDF8" />
+      <stop offset="100%" stop-color="#818CF8" />
+    </linearGradient>
+
+    <!-- Shield Fill Gradient -->
+    <linearGradient id="shield-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#00DFD8" />
+      <stop offset="100%" stop-color="#6366F1" />
+    </linearGradient>
+
+    <!-- Ambient Shield Glow -->
+    <radialGradient id="shield-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00DFD8" stop-opacity="0.35" />
+      <stop offset="60%" stop-color="#38BDF8" stop-opacity="0.1" />
+      <stop offset="100%" stop-color="#00DFD8" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Scanner Laser Aura Gradient -->
+    <linearGradient id="laser-glow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00DFD8" stop-opacity="0" />
+      <stop offset="20%" stop-color="#00DFD8" stop-opacity="0.8" />
+      <stop offset="50%" stop-color="#38BDF8" stop-opacity="1" />
+      <stop offset="80%" stop-color="#00DFD8" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#00DFD8" stop-opacity="0" />
+    </linearGradient>
+
+    <style>
+      @keyframes floatShield {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-8px); }
+      }
+      @keyframes scanTerminal {
+        0% { transform: translateY(0px); opacity: 0.2; }
+        50% { opacity: 0.9; }
+        100% { transform: translateY(80px); opacity: 0.2; }
+      }
+      @keyframes radarPulse {
+        0%, 100% { transform: scale(1); opacity: 0.4; }
+        50% { transform: scale(1.08); opacity: 0.8; }
+      }
+      @keyframes blinkDot {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.25; }
+      }
+      .g-shield {
+        animation: floatShield 4.5s ease-in-out infinite;
+      }
+      .g-scan {
+        animation: scanTerminal 3.2s ease-in-out infinite alternate;
+      }
+      .g-radar {
+        animation: radarPulse 3s ease-in-out infinite;
+        transform-origin: 175px 200px;
+      }
+      .g-blink {
+        animation: blinkDot 1.6s ease-in-out infinite;
+      }
+      .title-bold {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        font-weight: 800;
+      }
+      .mono-text {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      }
+      .sub-font {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      }
+    </style>
+  </defs>
+
+  <!-- Base Dark Background -->
+  <rect width="1200" height="420" rx="16" fill="url(#bg-grad)" stroke="#1e293b" stroke-width="1.5" />
+
+  <!-- Subtle Geometric Cyber Grid -->
+  <g stroke="#ffffff" stroke-opacity="0.035" stroke-width="1">
+    <line x1="0" y1="60" x2="1200" y2="60" />
+    <line x1="0" y1="120" x2="1200" y2="120" />
+    <line x1="0" y1="180" x2="1200" y2="180" />
+    <line x1="0" y1="240" x2="1200" y2="240" />
+    <line x1="0" y1="300" x2="1200" y2="300" />
+    <line x1="0" y1="360" x2="1200" y2="360" />
+    <line x1="100" y1="0" x2="100" y2="420" />
+    <line x1="250" y1="0" x2="250" y2="420" />
+    <line x1="400" y1="0" x2="400" y2="420" />
+    <line x1="550" y1="0" x2="550" y2="420" />
+    <line x1="700" y1="0" x2="700" y2="420" />
+    <line x1="850" y1="0" x2="850" y2="420" />
+    <line x1="1000" y1="0" x2="1000" y2="420" />
+    <line x1="1150" y1="0" x2="1150" y2="420" />
+  </g>
+
+  <!-- Ambient Glow Behind Shield -->
+  <circle cx="175" cy="200" r="160" fill="url(#shield-glow)" />
+
+  <!-- ================= LEFT SECURITY EMBLEM ================= -->
+  <!-- Outer Radar Circles -->
+  <circle cx="175" cy="200" r="105" fill="none" stroke="#00DFD8" stroke-width="1" stroke-dasharray="4 6" stroke-opacity="0.4" class="g-radar" />
+  <circle cx="175" cy="200" r="82" fill="none" stroke="#38BDF8" stroke-width="1.2" stroke-opacity="0.3" />
+  <circle cx="175" cy="200" r="58" fill="none" stroke="#818CF8" stroke-width="1" stroke-dasharray="2 4" stroke-opacity="0.35" />
+
+  <!-- Target crosshairs -->
+  <line x1="175" y1="85" x2="175" y2="95" stroke="#00DFD8" stroke-width="2" stroke-opacity="0.6" />
+  <line x1="175" y1="305" x2="175" y2="315" stroke="#00DFD8" stroke-width="2" stroke-opacity="0.6" />
+  <line x1="60" y1="200" x2="70" y2="200" stroke="#00DFD8" stroke-width="2" stroke-opacity="0.6" />
+  <line x1="280" y1="200" x2="290" y2="200" stroke="#00DFD8" stroke-width="2" stroke-opacity="0.6" />
+
+  <!-- Floating Shield Graphic -->
+  <g class="g-shield">
+    <!-- Main Outer Shield -->
+    <path d="M 175 125 L 235 152 C 235 210 175 258 175 258 C 175 258 115 210 115 152 Z" 
+          fill="#0c1427" stroke="url(#accent-grad)" stroke-width="4" stroke-linejoin="round" />
+    
+    <!-- Inner Shield Inset Line -->
+    <path d="M 175 137 L 222 158 C 222 204 175 242 175 242 C 175 242 128 204 128 158 Z" 
+          fill="none" stroke="#38BDF8" stroke-width="1.5" stroke-dasharray="4 4" stroke-opacity="0.5" />
+
+    <!-- Padlock Graphic inside Shield -->
+    <!-- Padlock Shackle -->
+    <path d="M 164 184 V 173 C 164 167 169 162 175 162 C 181 162 186 167 186 173 V 184" 
+          fill="none" stroke="#00DFD8" stroke-width="3.2" stroke-linecap="round" />
+    <!-- Padlock Body -->
+    <rect x="156" y="184" width="38" height="28" rx="5" fill="url(#shield-grad)" />
+    <!-- Keyhole -->
+    <circle cx="175" cy="195" r="3.5" fill="#080c14" />
+    <path d="M 175 198 V 205" stroke="#080c14" stroke-width="2.5" stroke-linecap="round" />
+  </g>
+
+  <!-- Detected Secret Indicator Blip -->
+  <circle cx="248" cy="148" r="4.5" fill="#f43f5e" class="g-blink" />
+  <circle cx="248" cy="148" r="9" fill="none" stroke="#f43f5e" stroke-width="1" stroke-opacity="0.5" class="g-blink" />
+
+  <!-- ================= RIGHT CONTENT AREA ================= -->
+
+  <!-- Status / Category Pills -->
+  <g transform="translate(340, 40)">
+    <!-- Scanner Active Pill -->
+    <rect x="0" y="0" width="180" height="26" rx="13" fill="#0c1a2e" stroke="#1e3a5f" stroke-width="1.2" />
+    <circle cx="15" cy="13" r="4.5" fill="#10b981" class="g-blink" />
+    <text x="28" y="17" fill="#38bdf8" class="sub-font" font-size="11" font-weight="700" letter-spacing="0.6">PROTECTION ACTIVE</text>
+
+    <!-- Scope Badge -->
+    <rect x="192" y="0" width="195" height="26" rx="13" fill="#161e2e" stroke="#334155" stroke-width="1" />
+    <text x="204" y="17" fill="#94a3b8" class="sub-font" font-size="11" font-weight="600" letter-spacing="0.4">PRE-COMMIT &amp; CI/CD GATES</text>
+
+    <!-- Scope Badge 2 -->
+    <rect x="399" y="0" width="160" height="26" rx="13" fill="#161e2e" stroke="#334155" stroke-width="1" />
+    <text x="411" y="17" fill="#a78bfa" class="sub-font" font-size="11" font-weight="600" letter-spacing="0.4">NHI SECURITY &amp; ASPM</text>
+  </g>
+
+  <!-- Title Line 1 -->
+  <text x="340" y="104" class="title-bold" font-size="36" fill="#f8fafc" letter-spacing="-0.5">Awesome Secrets Detection</text>
+  <!-- Title Line 2 with Gradient -->
+  <text x="340" y="144" class="title-bold" font-size="36" fill="url(#accent-grad)" letter-spacing="-0.5">Platform Ecosystem</text>
+
+  <!-- Subtitle -->
+  <text x="340" y="174" class="sub-font" font-size="14.5" fill="#94a3b8" font-weight="400">
+    The Definitive Guide to Secret Scanning, Push Protection, Non-Human Identities &amp; Token Verification
+  </text>
+
+  <!-- Terminal Inspection Box -->
+  <g transform="translate(340, 196)">
+    <!-- Box Background -->
+    <rect width="810" height="125" rx="8" fill="#040711" stroke="#1e293b" stroke-width="1.2" />
+    
+    <!-- Titlebar -->
+    <path d="M 0 8 C 0 3.58 3.58 0 8 0 L 802 0 C 806.42 0 810 3.58 810 8 L 810 26 L 0 26 Z" fill="#090f1d" />
+    <line x1="0" y1="26" x2="810" y2="26" stroke="#1e293b" stroke-width="1" />
+    
+    <!-- macOS Window Controls -->
+    <circle cx="14" cy="13" r="4" fill="#ef4444" />
+    <circle cx="28" cy="13" r="4" fill="#f59e0b" />
+    <circle cx="42" cy="13" r="4" fill="#10b981" />
+    <text x="58" y="17" fill="#64748b" class="mono-text" font-size="10.5">secrets-detection-hook — push-protection-engine</text>
+
+    <!-- Terminal Content Lines -->
+    <text x="16" y="48" fill="#64748b" class="mono-text" font-size="11.5">$ git push origin main</text>
+    <text x="16" y="70" fill="#f43f5e" class="mono-text" font-size="11.5" font-weight="700">✖ [LEAK DETECTED] AWS_SECRET_ACCESS_KEY=&quot;wJalrXUtnFEMI/K7MDENG/bPxRfiCY...&quot;</text>
+    <text x="16" y="92" fill="#38bdf8" class="mono-text" font-size="11.5">✔ [VERIFIED ACTIVE] High Confidence • Push Blocked • Auto-Quarantine Triggered</text>
+    <text x="16" y="112" fill="#10b981" class="mono-text" font-size="11">🛡️ Remediated via Doppler / GitGuardian • Rotation ticket #SEC-104 dispatched</text>
+
+    <!-- Dynamic Laser Scan Line across Terminal -->
+    <g class="g-scan">
+      <line x1="2" y1="35" x2="808" y2="35" stroke="url(#laser-glow)" stroke-width="2" />
+    </g>
+  </g>
+
+  <!-- Bottom Ecosystem Tool Tags -->
+  <g transform="translate(340, 342)">
+    <g transform="translate(0, 0)">
+      <rect width="82" height="24" rx="6" fill="#0f172a" stroke="#1e293b" />
+      <text x="41" y="16" fill="#38bdf8" class="sub-font" font-size="11" font-weight="600" text-anchor="middle">Gitleaks</text>
+    </g>
+    <g transform="translate(92, 0)">
+      <rect width="95" height="24" rx="6" fill="#0f172a" stroke="#1e293b" />
+      <text x="47.5" y="16" fill="#f43f5e" class="sub-font" font-size="11" font-weight="600" text-anchor="middle">TruffleHog</text>
+    </g>
+    <g transform="translate(197, 0)">
+      <rect width="102" height="24" rx="6" fill="#0f172a" stroke="#1e293b" />
+      <text x="51" y="16" fill="#818cf8" class="sub-font" font-size="11" font-weight="600" text-anchor="middle">GitGuardian</text>
+    </g>
+    <g transform="translate(309, 0)">
+      <rect width="165" height="24" rx="6" fill="#0f172a" stroke="#1e293b" />
+      <text x="82.5" y="16" fill="#34d399" class="sub-font" font-size="11" font-weight="600" text-anchor="middle">GitHub Push Protection</text>
+    </g>
+    <g transform="translate(484, 0)">
+      <rect width="70" height="24" rx="6" fill="#0f172a" stroke="#1e293b" />
+      <text x="35" y="16" fill="#00DFD8" class="sub-font" font-size="11" font-weight="600" text-anchor="middle">Trivy</text>
+    </g>
+    <g transform="translate(564, 0)">
+      <rect width="85" height="24" rx="6" fill="#0f172a" stroke="#1e293b" />
+      <text x="42.5" y="16" fill="#c084fc" class="sub-font" font-size="11" font-weight="600" text-anchor="middle">Semgrep</text>
+    </g>
+    <g transform="translate(659, 0)">
+      <rect width="145" height="24" rx="6" fill="#0f172a" stroke="#1e293b" />
+      <text x="72.5" y="16" fill="#fbbf24" class="sub-font" font-size="11" font-weight="600" text-anchor="middle">Doppler SecretOps</text>
+    </g>
+  </g>
+
+  <!-- Bottom Accent Gradient Bar -->
+  <rect x="0" y="412" width="1200" height="8" fill="url(#accent-grad)" rx="4" />
+</svg>

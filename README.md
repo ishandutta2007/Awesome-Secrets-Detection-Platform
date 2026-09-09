@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./assets/banner.svg" alt="Awesome Secrets Detection Platform Banner" width="100%" />
+  <img src="assets/banner.svg" alt="Awesome Secrets Detection Platform Banner" width="100%" />
 </p>
 
 # Awesome Secrets Detection Platform 🛡️
