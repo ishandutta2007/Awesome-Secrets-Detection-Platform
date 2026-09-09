@@ -1,0 +1,2 @@
+# Awesome-Secrets-Detection-Platform
+
