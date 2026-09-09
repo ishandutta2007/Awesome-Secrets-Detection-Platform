@@ -8,10 +8,7 @@
 > 
 > *A curated, open-source-first directory covering Git history scanning, pre-commit push protection, CI/CD automated gates, live API secret verification, token discovery, repository monitoring, and developer security guardrails.*
 
-[![Awesome](https://awesome.re/badge.svg)](https://github.com/ishandutta2007/Awesome-Awesome-Awesome)
-[![Last Updated](https://img.shields.io/badge/Last%20Updated-September%202026-brightgreen.svg)](#)
-[![Contributions Welcome](https://img.shields.io/badge/Contributions-Welcome-blue.svg)](#how-to-contribute)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+<a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a><a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a> [![Last Updated](https://img.shields.io/badge/Last%20Updated-September%202026-brightgreen.svg)](#) [![Contributions Welcome](https://img.shields.io/badge/Contributions-Welcome-blue.svg)](#how-to-contribute) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE) <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
 
 **Keywords:** `secrets-detection` • `secret-scanning` • `credential-leak-prevention` • `api-key-scanner` • `git-history-scanning` • `trufflehog` • `gitleaks` • `gitguardian` • `github-secret-scanning` • `non-human-identities` • `nhi-governance` • `aspm` • `devsecops` • `pre-commit-hooks` • `push-protection` • `token-verification` • `credential-management`
 
