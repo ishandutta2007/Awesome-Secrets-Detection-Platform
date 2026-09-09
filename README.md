@@ -1,26 +1,23 @@
-# Awesome-Secrets-Detection-Platform
+# Awesome Secrets Detection Platform 🛡️
 
-## Top Secrets Detection Platforms
+> **The Definitive Ecosystem Guide to Secrets Detection, Credential Leak Prevention, Secret Scanning, Non-Human Identity (NHI) Security, and ASPM Platforms**
+> 
+> *A curated, open-source-first directory covering Git history scanning, pre-commit push protection, CI/CD automated gates, live API secret verification, token discovery, repository monitoring, and developer security guardrails.*
 
+[![Awesome](https://awesome.re/badge.svg)](https://github.com/ishandutta2007/Awesome-Awesome-Awesome)
+[![Last Updated](https://img.shields.io/badge/Last%20Updated-September%202026-brightgreen.svg)](#)
+[![Contributions Welcome](https://img.shields.io/badge/Contributions-Welcome-blue.svg)](#how-to-contribute)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
+**Keywords:** `secrets-detection` • `secret-scanning` • `credential-leak-prevention` • `api-key-scanner` • `git-history-scanning` • `trufflehog` • `gitleaks` • `gitguardian` • `github-secret-scanning` • `non-human-identities` • `nhi-governance` • `aspm` • `devsecops` • `pre-commit-hooks` • `push-protection` • `token-verification` • `credential-management`
 
-**A comprehensive ecosystem of secrets detection, credential leak prevention, secret scanning, verification and remediation platforms**
+---
 
+## 📌 Executive Overview
 
+**Secrets detection platforms** identify exposed authentication credentials—including API keys, passwords, personal access tokens (PATs), private SSH/PGP keys, cloud IAM credentials (AWS, GCP, Azure), database connection strings, OAuth client secrets, and webhooks—before or after they reach source code repositories, CI/CD pipelines, container registries, and collaboration channels.
 
-*Open-source-first reference covering Git history scanning, pre-commit protection, CI/CD scanning, secret verification, credential discovery, repository monitoring, developer guardrails and secret-sprawl management.*
-
-
-
-**Last updated: September 2026**
-
-
-
-Secrets detection platforms identify exposed credentials such as API keys, passwords, access tokens, private keys, cloud credentials, database credentials and other sensitive authentication material before or after they enter source repositories and other developer-accessible systems.
-
-
-
-Examples include **GitGuardian, Spectral, TruffleHog, Gitleaks, Doppler Secret Scanner, Cycode, Legit Security, Checkmarx Secrets, Snyk Secrets and GitHub Secret Scanning**.
+Leading platforms include **Trivy, Gitleaks, TruffleHog, GitGuardian, GitHub Secret Scanning, GitLab Secret Detection, Semgrep Secrets, Doppler Secret Scanner, Cycode, Snyk Secrets, Checkmarx Secrets, and Legit Security**.
 
 
 
