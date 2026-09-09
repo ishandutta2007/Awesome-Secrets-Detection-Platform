@@ -198,19 +198,47 @@ GitHub Secret Scanning currently supports repository-wide detection, custom patt
 
 # Open-Source Secrets Detection Projects
 
+These are the most important open-source projects to investigate first, ranked by GitHub popularity (star counts descending):
 
-
-These are the most important open-source projects to investigate first.
-
-
+| Rank | Project | Stars | Primary Focus | Best For | License |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | [Trivy](https://github.com/aquasecurity/trivy) [![GitHub stars](https://img.shields.io/github/stars/aquasecurity/trivy?style=social&color=white)](https://github.com/aquasecurity/trivy/stargazers) | 37.8k+ | Multi-purpose vulnerability, container & secret scanner | All-in-one DevSecOps scanning | Apache-2.0 |
+| 2 | [Gitleaks](https://github.com/gitleaks/gitleaks) [![GitHub stars](https://img.shields.io/github/stars/gitleaks/gitleaks?style=social&color=white)](https://github.com/gitleaks/gitleaks/stargazers) | 29.2k+ | Fast Git repository & commit scanning | Pre-commit hooks, CI/CD pipelines, Git history | MIT |
+| 3 | [TruffleHog](https://github.com/trufflesecurity/trufflehog) [![GitHub stars](https://img.shields.io/github/stars/trufflesecurity/trufflehog?style=social&color=white)](https://github.com/trufflesecurity/trufflehog/stargazers) | 27.7k+ | Secret detection & live credential verification | High-signal validation with 800+ detectors | AGPL-3.0 |
+| 4 | [Semgrep](https://github.com/semgrep/semgrep) [![GitHub stars](https://img.shields.io/github/stars/semgrep/semgrep?style=social&color=white)](https://github.com/semgrep/semgrep/stargazers) | 16.6k+ | Semantic code analysis & contextual secrets | AST-aware secret scanning & guardrails | LGPL-2.1 |
+| 5 | [git-secrets](https://github.com/awslabs/git-secrets) [![GitHub stars](https://img.shields.io/github/stars/awslabs/git-secrets?style=social&color=white)](https://github.com/awslabs/git-secrets/stargazers) | 13.4k+ | Commit-time AWS & credential prevention | Preventing accidental credential commits to Git | Apache-2.0 |
+| 6 | [Gitrob](https://github.com/michenriksen/gitrob) [![GitHub stars](https://img.shields.io/github/stars/michenriksen/gitrob?style=social&color=white)](https://github.com/michenriksen/gitrob/stargazers) | 6.2k+ | GitHub organization reconnaissance | Security auditing & OSINT repository reconnaissance | MIT |
+| 7 | [detect-secrets](https://github.com/Yelp/detect-secrets) [![GitHub stars](https://img.shields.io/github/stars/Yelp/detect-secrets?style=social&color=white)](https://github.com/Yelp/detect-secrets/stargazers) | 4.6k+ | Enterprise baseline-managed scanning | Enterprise legacy repos & baseline diffs | Apache-2.0 |
+| 8 | [shhgit](https://github.com/eth0izzle/shhgit) [![GitHub stars](https://img.shields.io/github/stars/eth0izzle/shhgit?style=social&color=white)](https://github.com/eth0izzle/shhgit/stargazers) | 4.0k+ | Real-time public GitHub/GitLab scanner | Monitoring public commit streams in real time | MIT |
+| 9 | [Nosey Parker](https://github.com/praetorian-inc/noseyparker) [![GitHub stars](https://img.shields.io/github/stars/praetorian-inc/noseyparker?style=social&color=white)](https://github.com/praetorian-inc/noseyparker/stargazers) | 2.3k+ | Ultra-high performance textual & Git scanner | Multi-gigabyte repository history scanning | Apache-2.0 |
+| 10 | [ggshield](https://github.com/GitGuardian/ggshield) [![GitHub stars](https://img.shields.io/github/stars/GitGuardian/ggshield?style=social&color=white)](https://github.com/GitGuardian/ggshield/stargazers) | 2.0k+ | Developer CLI & pre-commit secrets engine | 500+ secret detectors, pre-commit & CI/CD | MIT |
+| 11 | [git-hound](https://github.com/tillson/git-hound) [![GitHub stars](https://img.shields.io/github/stars/tillson/git-hound?style=social&color=white)](https://github.com/tillson/git-hound/stargazers) | 1.5k+ | GitHub dorks & repository reconnaissance | Organization-wide secrets discovery across GitHub | MIT |
+| 12 | [Secretlint](https://github.com/secretlint/secretlint) [![GitHub stars](https://img.shields.io/github/stars/secretlint/secretlint?style=social&color=white)](https://github.com/secretlint/secretlint/stargazers) | 1.4k+ | Pluggable linting framework for credentials | JS/TS ecosystems, npm/monorepos, pre-commit | MIT |
+| 13 | [git-all-secrets](https://github.com/anshumanbh/git-all-secrets) [![GitHub stars](https://img.shields.io/github/stars/anshumanbh/git-all-secrets?style=social&color=white)](https://github.com/anshumanbh/git-all-secrets/stargazers) | 1.1k+ | Multi-scanner Git secret aggregator | Aggregating multiple Git scanning engines | MIT |
+| 14 | [DumpsterDiver](https://github.com/securing/DumpsterDiver) [![GitHub stars](https://img.shields.io/github/stars/securing/DumpsterDiver?style=social&color=white)](https://github.com/securing/DumpsterDiver/stargazers) | 1.0k+ | Deep analysis of big data pools & files | Auditing archives, compressed files & memory dumps | MIT |
+| 15 | [Earlybird](https://github.com/americanexpress/earlybird) [![GitHub stars](https://img.shields.io/github/stars/americanexpress/earlybird?style=social&color=white)](https://github.com/americanexpress/earlybird/stargazers) | 770+ | Sensitive data, PII & crypto detection | Enterprise source code auditing and compliance | Apache-2.0 |
+| 16 | [Titus](https://github.com/praetorian-inc/titus) [![GitHub stars](https://img.shields.io/github/stars/praetorian-inc/titus?style=social&color=white)](https://github.com/praetorian-inc/titus/stargazers) | 690+ | High-speed scanning with live validation | 480+ detectors with verification, Burp & Chrome extensions | Apache-2.0 |
+| 17 | [repo-supervisor](https://github.com/auth0/repo-supervisor) [![GitHub stars](https://img.shields.io/github/stars/auth0/repo-supervisor?style=social&color=white)](https://github.com/auth0/repo-supervisor/stargazers) | 650+ | AWS Lambda / local code scanner | Serverless repo scanning and CI integration | MIT |
+| 18 | [rusty-hog](https://github.com/newrelic/rusty-hog) [![GitHub stars](https://img.shields.io/github/stars/newrelic/rusty-hog?style=social&color=white)](https://github.com/newrelic/rusty-hog/stargazers) | 550+ | High-performance Rust regex secret scanning | Multi-threaded Git, Jira, Slack & Confluence scanning | Apache-2.0 |
+| 19 | [Whispers](https://github.com/Skyscanner/whispers) [![GitHub stars](https://img.shields.io/github/stars/Skyscanner/whispers?style=social&color=white)](https://github.com/Skyscanner/whispers/stargazers) | 500+ | Static structured text secrets identification | Auditing JSON, YAML, XML, and config files | Apache-2.0 |
+| 20 | [credential-digger](https://github.com/SAP/credential-digger) [![GitHub stars](https://img.shields.io/github/stars/SAP/credential-digger?style=social&color=white)](https://github.com/SAP/credential-digger/stargazers) | 360+ | ML-assisted false positive reduction | Git history scanning with ML noise filtering | Apache-2.0 |
+| 21 | [Cycode CLI](https://github.com/cycodehq/cycode-cli) [![GitHub stars](https://img.shields.io/github/stars/cycodehq/cycode-cli?style=social&color=white)](https://github.com/cycodehq/cycode-cli/stargazers) | 100+ | Multi-vector developer security scanner | Combined Secrets, SAST, SCA, and IaC scanning | Apache-2.0 |
 
 ---
 
 
 
-## 1. Gitleaks
+## 1. Trivy [![GitHub stars](https://img.shields.io/github/stars/aquasecurity/trivy?style=social&color=white)](https://github.com/aquasecurity/trivy/stargazers)
 
+[GitHub](https://github.com/aquasecurity/trivy)
 
+Trivy by Aqua Security is a comprehensive, open-source security scanner that detects vulnerabilities (CVEs), IaC misconfigurations, sensitive data, and exposed secrets across Git repositories, container images, filesystems, and Kubernetes clusters.
+
+Its built-in secret scanning engine checks against extensive regular expression rules for cloud credentials, API tokens, and private keys during pre-commit, CI/CD pipelines, and runtime container inspections.
+
+---
+
+## 2. Gitleaks [![GitHub stars](https://img.shields.io/github/stars/gitleaks/gitleaks?style=social&color=white)](https://github.com/gitleaks/gitleaks/stargazers)
 
 [GitHub](https://github.com/gitleaks/gitleaks)
 
@@ -306,9 +334,7 @@ Commit  Block
 
 
 
-# 2. TruffleHog
-
-
+## 3. TruffleHog [![GitHub stars](https://img.shields.io/github/stars/trufflesecurity/trufflehog?style=social&color=white)](https://github.com/trufflesecurity/trufflehog/stargazers)
 
 [GitHub](https://github.com/trufflesecurity/trufflehog)
 
@@ -398,53 +424,64 @@ This can dramatically reduce remediation noise.
 
 
 
-# 3. detect-secrets
+## 4. git-secrets [![GitHub stars](https://img.shields.io/github/stars/awslabs/git-secrets?style=social&color=white)](https://github.com/awslabs/git-secrets/stargazers)
 
+[GitHub](https://github.com/awslabs/git-secrets)
 
+AWS's `git-secrets` is a lightweight prevention-oriented tool.
+
+It installs Git hooks and scans:
+
+* commits
+* commit messages
+* merge histories
+* repository files
+* Git history
+
+It supports custom prohibited patterns and allow patterns, plus AWS-specific credential checks.
+
+Typical model:
+
+```text
+git commit
+     ↓
+pre-commit hook
+     ↓
+git-secrets
+     ↓
+Pattern match?
+  ┌──┴──┐
+ No    Yes
+  │      │
+  ↓      ↓
+Allow   Block
+```
+
+---
+
+## 5. detect-secrets [![GitHub stars](https://img.shields.io/github/stars/Yelp/detect-secrets?style=social&color=white)](https://github.com/Yelp/detect-secrets/stargazers)
 
 [GitHub](https://github.com/Yelp/detect-secrets)
 
-
-
 Yelp's `detect-secrets` is designed around preventing **new secrets from entering a codebase** while allowing organizations to maintain a baseline for existing findings.
-
-
 
 This is particularly useful for legacy repositories.
 
-
-
 Core concepts:
 
-
-
 ```text
-
 Existing Secrets
-
       ↓
-
 Baseline
-
       ↓
-
 Ignore / Track
 
-
-
 New Secrets
-
       ↓
-
 Detect
-
       ↓
-
 Block
-
 ```
-
-
 
 The project explicitly supports baseline-based workflows so organizations can prevent new secrets while separately working through legacy exposure.
 
@@ -454,121 +491,28 @@ The project explicitly supports baseline-based workflows so organizations can pr
 
 
 
-# 4. git-secrets
-
-
-
-[GitHub](https://github.com/awslabs/git-secrets)
-
-
-
-AWS's `git-secrets` is a lightweight prevention-oriented tool.
-
-
-
-It installs Git hooks and scans:
-
-
-
-* commits
-
-* commit messages
-
-* merge histories
-
-* repository files
-
-* Git history
-
-
-
-It supports custom prohibited patterns and allow patterns, plus AWS-specific credential checks.
-
-
-
-Typical model:
-
-
-
-```text
-
-git commit
-
-     ↓
-
-pre-commit hook
-
-     ↓
-
-git-secrets
-
-     ↓
-
-Pattern match?
-
-  ┌──┴──┐
-
- No    Yes
-
-  │      │
-
-  ↓      ↓
-
-Allow   Block
-
-```
-
-
-
----
-
-
-
-# 5. Secretlint
-
-
+## 6. Secretlint [![GitHub stars](https://img.shields.io/github/stars/secretlint/secretlint?style=social&color=white)](https://github.com/secretlint/secretlint/stargazers)
 
 [GitHub](https://github.com/secretlint/secretlint)
 
-
-
 Secretlint is a pluggable credential-linting framework.
-
-
 
 Features include:
 
-
-
 * project-level configuration
-
 * custom rules
-
 * pre-commit integration
-
 * CI integration
-
 * multiple output formats
-
 * SARIF support
-
 * Docker
-
 * browser extension
-
-
 
 It is especially attractive for JavaScript/TypeScript-heavy environments where teams want an ESLint-like developer experience for secrets.
 
-
-
 ---
 
-
-
-# 6. Titus
-
-
+## 7. Titus [![GitHub stars](https://img.shields.io/github/stars/praetorian-inc/titus?style=social&color=white)](https://github.com/praetorian-inc/titus/stargazers)
 
 [GitHub](https://github.com/praetorian-inc/titus)
 
@@ -648,21 +592,15 @@ Current Code
 
 
 
-Important projects include:
+Important projects include (ranked by stars descending):
 
-
-
-* [Gitleaks](https://github.com/gitleaks/gitleaks)
-
-* [TruffleHog](https://github.com/trufflesecurity/trufflehog)
-
-* [Titus](https://github.com/praetorian-inc/titus)
-
-* [detect-secrets](https://github.com/Yelp/detect-secrets)
-
-* [git-secrets](https://github.com/awslabs/git-secrets)
-
-* [Secretlint](https://github.com/secretlint/secretlint)
+* [Gitleaks](https://github.com/gitleaks/gitleaks) [![GitHub stars](https://img.shields.io/github/stars/gitleaks/gitleaks?style=social&color=white)](https://github.com/gitleaks/gitleaks/stargazers)
+* [TruffleHog](https://github.com/trufflesecurity/trufflehog) [![GitHub stars](https://img.shields.io/github/stars/trufflesecurity/trufflehog?style=social&color=white)](https://github.com/trufflesecurity/trufflehog/stargazers)
+* [git-secrets](https://github.com/awslabs/git-secrets) [![GitHub stars](https://img.shields.io/github/stars/awslabs/git-secrets?style=social&color=white)](https://github.com/awslabs/git-secrets/stargazers)
+* [detect-secrets](https://github.com/Yelp/detect-secrets) [![GitHub stars](https://img.shields.io/github/stars/Yelp/detect-secrets?style=social&color=white)](https://github.com/Yelp/detect-secrets/stargazers)
+* [Nosey Parker](https://github.com/praetorian-inc/noseyparker) [![GitHub stars](https://img.shields.io/github/stars/praetorian-inc/noseyparker?style=social&color=white)](https://github.com/praetorian-inc/noseyparker/stargazers)
+* [Secretlint](https://github.com/secretlint/secretlint) [![GitHub stars](https://img.shields.io/github/stars/secretlint/secretlint?style=social&color=white)](https://github.com/secretlint/secretlint/stargazers)
+* [Titus](https://github.com/praetorian-inc/titus) [![GitHub stars](https://img.shields.io/github/stars/praetorian-inc/titus?style=social&color=white)](https://github.com/praetorian-inc/titus/stargazers)
 
 
 
@@ -780,13 +718,11 @@ Credential active?
 
 
 
-Important verification-capable projects include:
+Important verification-capable projects include (ranked by stars descending):
 
-
-
-* [TruffleHog](https://github.com/trufflesecurity/trufflehog)
-
-* [Titus](https://github.com/praetorian-inc/titus)
+* [TruffleHog](https://github.com/trufflesecurity/trufflehog) [![GitHub stars](https://img.shields.io/github/stars/trufflesecurity/trufflehog?style=social&color=white)](https://github.com/trufflesecurity/trufflehog/stargazers)
+* [ggshield](https://github.com/GitGuardian/ggshield) [![GitHub stars](https://img.shields.io/github/stars/GitGuardian/ggshield?style=social&color=white)](https://github.com/GitGuardian/ggshield/stargazers)
+* [Titus](https://github.com/praetorian-inc/titus) [![GitHub stars](https://img.shields.io/github/stars/praetorian-inc/titus?style=social&color=white)](https://github.com/praetorian-inc/titus/stargazers)
 
 
 
@@ -810,47 +746,26 @@ Secrets detection increasingly appears inside broader open-source application-se
 
 
 
-## Semgrep
-
-
+## Semgrep [![GitHub stars](https://img.shields.io/github/stars/semgrep/semgrep?style=social&color=white)](https://github.com/semgrep/semgrep/stargazers)
 
 [GitHub](https://github.com/semgrep/semgrep)
 
-
-
 Semgrep is an open-source static analysis engine that can be used for code security and secret-related rules.
-
-
 
 It supports:
 
-
-
 * IDE
-
 * pre-commit
-
 * CI/CD
-
 * custom rules
-
 * semantic code matching
-
 * security guardrails
-
-
 
 However, Semgrep's own documentation distinguishes the capabilities of the open-source Community Edition from the broader commercial AppSec platform.
 
-
-
 ---
 
-
-
-## Cycode CLI
-
-
+## Cycode CLI [![GitHub stars](https://img.shields.io/github/stars/cycodehq/cycode-cli?style=social&color=white)](https://github.com/cycodehq/cycode-cli/stargazers)
 
 [GitHub](https://github.com/cycodehq/cycode-cli)
 
@@ -1036,37 +951,31 @@ GitHub now documents AI-detected secrets as an extension of its generic secret d
 
 ## High-Value Projects
 
+* [Trivy](https://github.com/aquasecurity/trivy) [![GitHub stars](https://img.shields.io/github/stars/aquasecurity/trivy?style=social&color=white)](https://github.com/aquasecurity/trivy/stargazers) — multi-target vulnerability, container, IaC, and secret scanner
+* [Gitleaks](https://github.com/gitleaks/gitleaks) [![GitHub stars](https://img.shields.io/github/stars/gitleaks/gitleaks?style=social&color=white)](https://github.com/gitleaks/gitleaks/stargazers) — SAST-style Git secret scanner and pre-commit hook
+* [TruffleHog](https://github.com/trufflesecurity/trufflehog) [![GitHub stars](https://img.shields.io/github/stars/trufflesecurity/trufflehog?style=social&color=white)](https://github.com/trufflesecurity/trufflehog/stargazers) — active secret verification engine with 800+ detectors
+* [Semgrep](https://github.com/semgrep/semgrep) [![GitHub stars](https://img.shields.io/github/stars/semgrep/semgrep?style=social&color=white)](https://github.com/semgrep/semgrep/stargazers) — AST and semantic pattern matching engine for code and secrets
+* [git-secrets](https://github.com/awslabs/git-secrets) [![GitHub stars](https://img.shields.io/github/stars/awslabs/git-secrets?style=social&color=white)](https://github.com/awslabs/git-secrets/stargazers) — AWS and credential commit blocker
+* [detect-secrets](https://github.com/Yelp/detect-secrets) [![GitHub stars](https://img.shields.io/github/stars/Yelp/detect-secrets?style=social&color=white)](https://github.com/Yelp/detect-secrets/stargazers) — baseline-driven enterprise credential scanner
+* [ggshield](https://github.com/GitGuardian/ggshield) [![GitHub stars](https://img.shields.io/github/stars/GitGuardian/ggshield?style=social&color=white)](https://github.com/GitGuardian/ggshield/stargazers) — developer CLI with 500+ secret detectors and CI integrations
+* [Secretlint](https://github.com/secretlint/secretlint) [![GitHub stars](https://img.shields.io/github/stars/secretlint/secretlint?style=social&color=white)](https://github.com/secretlint/secretlint/stargazers) — pluggable credential linter for JavaScript/TypeScript and multi-language repositories
+* [Titus](https://github.com/praetorian-inc/titus) [![GitHub stars](https://img.shields.io/github/stars/praetorian-inc/titus?style=social&color=white)](https://github.com/praetorian-inc/titus/stargazers) — high-speed secrets scanner with live validation (Burp & Chrome extensions)
+* [Whispers](https://github.com/Skyscanner/whispers) [![GitHub stars](https://img.shields.io/github/stars/Skyscanner/whispers?style=social&color=white)](https://github.com/Skyscanner/whispers/stargazers) — structured text and configuration secrets identification
+* [credential-digger](https://github.com/SAP/credential-digger) [![GitHub stars](https://img.shields.io/github/stars/SAP/credential-digger?style=social&color=white)](https://github.com/SAP/credential-digger/stargazers) — ML-assisted false-positive filtering Git secret scanner
+* [Cycode CLI](https://github.com/cycodehq/cycode-cli) [![GitHub stars](https://img.shields.io/github/stars/cycodehq/cycode-cli?style=social&color=white)](https://github.com/cycodehq/cycode-cli/stargazers) — multi-vector developer CLI (Secrets, SAST, SCA, IaC)
 
+## Historical / Related Reconnaissance Projects
 
-* [Gitleaks](https://github.com/gitleaks/gitleaks)
-
-* [TruffleHog](https://github.com/trufflesecurity/trufflehog)
-
-* [Titus](https://github.com/praetorian-inc/titus)
-
-* [detect-secrets](https://github.com/Yelp/detect-secrets)
-
-* [git-secrets](https://github.com/awslabs/git-secrets)
-
-* [Secretlint](https://github.com/secretlint/secretlint)
-
-* [Semgrep](https://github.com/semgrep/semgrep)
-
-* [Cycode CLI](https://github.com/cycodehq/cycode-cli)
-
-
-
-## Historical / Related Projects
-
-
-
-* [Nosey Parker](https://github.com/praetorian-inc/noseyparker) — retired; superseded by Titus
-
-* [Gitrob](https://github.com/michenriksen/gitrob) — historical GitHub repository reconnaissance
-
-* [git-hound](https://github.com/tillson/git-hound) — GitHub secret reconnaissance
-
-* [truffleHog legacy](https://github.com/dxa4481/truffleHog) — historical predecessor to current TruffleHog
+* [Gitrob](https://github.com/michenriksen/gitrob) [![GitHub stars](https://img.shields.io/github/stars/michenriksen/gitrob?style=social&color=white)](https://github.com/michenriksen/gitrob/stargazers) — historical GitHub repository reconnaissance tool
+* [shhgit](https://github.com/eth0izzle/shhgit) [![GitHub stars](https://img.shields.io/github/stars/eth0izzle/shhgit?style=social&color=white)](https://github.com/eth0izzle/shhgit/stargazers) — real-time public GitHub/GitLab commit stream secret monitor
+* [Nosey Parker](https://github.com/praetorian-inc/noseyparker) [![GitHub stars](https://img.shields.io/github/stars/praetorian-inc/noseyparker?style=social&color=white)](https://github.com/praetorian-inc/noseyparker/stargazers) — retired; high-speed textual and Git history scanner (superseded by Titus)
+* [git-hound](https://github.com/tillson/git-hound) [![GitHub stars](https://img.shields.io/github/stars/tillson/git-hound?style=social&color=white)](https://github.com/tillson/git-hound/stargazers) — GitHub dorks & public secret reconnaissance
+* [git-all-secrets](https://github.com/anshumanbh/git-all-secrets) [![GitHub stars](https://img.shields.io/github/stars/anshumanbh/git-all-secrets?style=social&color=white)](https://github.com/anshumanbh/git-all-secrets/stargazers) — multi-scanner Git secret aggregator
+* [DumpsterDiver](https://github.com/securing/DumpsterDiver) [![GitHub stars](https://img.shields.io/github/stars/securing/DumpsterDiver?style=social&color=white)](https://github.com/securing/DumpsterDiver/stargazers) — searches secrets across file types and compressed archives
+* [Earlybird](https://github.com/americanexpress/earlybird) [![GitHub stars](https://img.shields.io/github/stars/americanexpress/earlybird?style=social&color=white)](https://github.com/americanexpress/earlybird/stargazers) — enterprise sensitive data and secret detection
+* [repo-supervisor](https://github.com/auth0/repo-supervisor) [![GitHub stars](https://img.shields.io/github/stars/auth0/repo-supervisor?style=social&color=white)](https://github.com/auth0/repo-supervisor/stargazers) — serverless AWS Lambda and local secret scanner
+* [rusty-hog](https://github.com/newrelic/rusty-hog) [![GitHub stars](https://img.shields.io/github/stars/newrelic/rusty-hog?style=social&color=white)](https://github.com/newrelic/rusty-hog/stargazers) — Rust-based high performance secret scanners (Git, Jira, Slack, Confluence)
+* [truffleHog legacy](https://github.com/dxa4481/truffleHog) [![GitHub stars](https://img.shields.io/github/stars/dxa4481/truffleHog?style=social&color=white)](https://github.com/dxa4481/truffleHog/stargazers) — historical Python predecessor to modern Go TruffleHog
 
 
 
