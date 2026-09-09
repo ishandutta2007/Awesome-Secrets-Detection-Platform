@@ -144,6 +144,8 @@ Contributions and corrections are welcome.
 
 * [How to Contribute](#how-to-contribute)
 
+* [Star History](#-star-history)
+
 * [Disclaimer](#disclaimer)
 
 
@@ -4445,11 +4447,13 @@ Useful contributions include:
 
 Pull requests are welcome.
 
-
-
 ---
 
+## 📈 Star History
 
+[![Star History Chart](https://star-history.dera.page/svg?repos=ishandutta2007/Awesome-Secrets-Detection-Platform&type=date&legend=top-left)](https://star-history.dera.page/#ishandutta2007/Awesome-Secrets-Detection-Platform&type=date&legend=top-left)
+
+---
 
 # Disclaimer
 
