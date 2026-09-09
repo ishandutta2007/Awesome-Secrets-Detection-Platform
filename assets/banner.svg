@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 360" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090d16" />
+      <stop offset="50%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#050811" />
+    </linearGradient>
+
+    <linearGradient id="primaryGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#818cf8" />
+      <stop offset="100%" stop-color="#c084fc" />
+    </linearGradient>
+
+    <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#6366f1" />
+    </linearGradient>
+
+    <linearGradient id="laserGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0" />
+      <stop offset="50%" stop-color="#38bdf8" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0" />
+    </linearGradient>
+
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#1e293b" stroke-width="0.8" stroke-opacity="0.45" />
+    </pattern>
+
+    <style>
+      @keyframes scan {
+        0% { transform: translateY(0px); opacity: 0; }
+        20% { opacity: 0.85; }
+        80% { opacity: 0.85; }
+        100% { transform: translateY(110px); opacity: 0; }
+      }
+      @keyframes pulse {
+        0%, 100% { transform: scale(1); opacity: 0.85; }
+        50% { transform: scale(1.05); opacity: 1; }
+      }
+      @keyframes blink {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.3; }
+      }
+      @keyframes floatEffect {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-4px); }
+      }
+      .scanner-beam {
+        animation: scan 2.8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+      }
+      .shield-pulse {
+        transform-origin: 110px 170px;
+        animation: pulse 3.5s ease-in-out infinite;
+      }
+      .live-dot {
+        animation: blink 1.4s ease-in-out infinite;
+      }
+      .floating {
+        animation: floatEffect 4s ease-in-out infinite;
+      }
+    </style>
+  </defs>
+
+  <rect width="1000" height="360" fill="url(#bgGrad)" rx="16" />
+  <rect width="1000" height="360" fill="url(#grid)" rx="16" />
+  <rect x="2" y="2" width="996" height="356" rx="14" fill="none" stroke="#334155" stroke-width="1.2" stroke-opacity="0.6" />
+
+  <circle cx="110" cy="170" r="140" fill="#38bdf8" opacity="0.08" filter="url(#glow)" />
+  <circle cx="700" cy="180" r="160" fill="#818cf8" opacity="0.07" filter="url(#glow)" />
+
+  <g class="shield-pulse">
+    <circle cx="110" cy="170" r="82" fill="none" stroke="#38bdf8" stroke-width="1" stroke-dasharray="4 6" opacity="0.4" />
+    <circle cx="110" cy="170" r="68" fill="none" stroke="#818cf8" stroke-width="1" opacity="0.5" />
+    <path d="M 110 100 L 155 122 C 155 170, 110 215, 110 215 C 110 215, 65 170, 65 122 Z" 
+          fill="url(#shieldGrad)" opacity="0.2" stroke="url(#shieldGrad)" stroke-width="2.5" filter="url(#glow)" />
+    <path d="M 100 148 L 100 138 C 100 132.5, 104.5 128, 110 128 C 115.5 128, 120 132.5, 120 138 L 120 148 Z" 
+          fill="none" stroke="#38bdf8" stroke-width="2.5" />
+    <rect x="94" y="148" width="32" height="26" rx="4" fill="#0f172a" stroke="#38bdf8" stroke-width="2" />
+    <circle cx="110" cy="158" r="3" fill="#38bdf8" />
+    <path d="M 110 161 L 110 167" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" />
+  </g>
+
+  <g transform="translate(230, 48)">
+    <rect x="0" y="0" width="165" height="26" rx="13" fill="#1e293b" stroke="#334155" stroke-width="1" />
+    <circle cx="14" cy="13" r="4.5" fill="#22c55e" class="live-dot" />
+    <text x="26" y="17" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600" letter-spacing="0.5">PROTECTION ACTIVE</text>
+  </g>
+
+  <text x="230" y="115" fill="url(#primaryGrad)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="34" font-weight="800" letter-spacing="-0.5">Awesome Secrets Detection Platform</text>
+  <text x="230" y="145" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14.5" font-weight="400">Credential Leak Prevention • Secret Scanning • NHI Security • ASPM</text>
+
+  <g class="floating" transform="translate(230, 168)">
+    <rect x="0" y="0" width="710" height="124" rx="10" fill="#030712" stroke="#1e293b" stroke-width="1.2" />
+    <circle cx="16" cy="15" r="4" fill="#ef4444" opacity="0.8" />
+    <circle cx="28" cy="15" r="4" fill="#f59e0b" opacity="0.8" />
+    <circle cx="40" cy="15" r="4" fill="#10b981" opacity="0.8" />
+    <text x="56" y="19" fill="#475569" font-family="monospace" font-size="10.5">pre-commit hook — git secret-scanner</text>
+
+    <text x="18" y="46" fill="#64748b" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="12">$ git push origin main</text>
+    <text x="18" y="68" fill="#f43f5e" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="12" font-weight="600">✖ [DETECTED] AWS_SECRET_ACCESS_KEY="wJalrXUtnFEMI/K7MDENG/bPxRfiCY..."</text>
+    <text x="18" y="90" fill="#38bdf8" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="12">✔ [VERIFIED] High Confidence • Live Credential • Push Blocked</text>
+    <text x="18" y="110" fill="#22c55e" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="11.5">🛡️ Remediation: Auto-quarantined &amp; rotated via Doppler / GitGuardian</text>
+
+    <rect x="1" y="28" width="708" height="2" fill="url(#laserGrad)" class="scanner-beam" />
+  </g>
+
+  <g transform="translate(230, 310)">
+    <rect x="0" y="0" width="85" height="24" rx="6" fill="#1e293b" opacity="0.8" />
+    <text x="10" y="16" fill="#38bdf8" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="600">Gitleaks</text>
+    <rect x="95" y="0" width="98" height="24" rx="6" fill="#1e293b" opacity="0.8" />
+    <text x="105" y="16" fill="#818cf8" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="600">TruffleHog</text>
+    <rect x="203" y="0" width="105" height="24" rx="6" fill="#1e293b" opacity="0.8" />
+    <text x="213" y="16" fill="#c084fc" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="600">GitGuardian</text>
+    <rect x="318" y="0" width="75" height="24" rx="6" fill="#1e293b" opacity="0.8" />
+    <text x="328" y="16" fill="#38bdf8" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="600">Trivy</text>
+    <rect x="403" y="0" width="85" height="24" rx="6" fill="#1e293b" opacity="0.8" />
+    <text x="413" y="16" fill="#818cf8" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="600">Semgrep</text>
+    <rect x="498" y="0" width="170" height="24" rx="6" fill="#1e293b" opacity="0.8" />
+    <text x="508" y="16" fill="#34d399" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="600">GitHub Push Protection</text>
+  </g>
+</svg>

@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="./assets/banner.svg" alt="Awesome Secrets Detection Platform Banner" width="100%" />
+</p>
+
 # Awesome Secrets Detection Platform 🛡️
 
 > **The Definitive Ecosystem Guide to Secrets Detection, Credential Leak Prevention, Secret Scanning, Non-Human Identity (NHI) Security, and ASPM Platforms**
